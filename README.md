@@ -28,8 +28,9 @@
  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  THE SOFTWARE.
 ```
+<hr>
 
-@author  David Connelly
-@copyright   Copyright (c) 2019, David Connelly. (https://speedcodingacademy.com)
-@license http://opensource.org/licenses/MIT  MIT License
-@link    https://trongate.io 
+@author  David Connelly<br>
+@copyright   Copyright (c) 2019, David Connelly. (https://speedcodingacademy.com)<br>
+@license http://opensource.org/licenses/MIT  MIT License<br>
+@link    https://trongate.io <br>
