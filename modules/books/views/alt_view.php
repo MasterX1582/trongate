@@ -1,0 +1,4 @@
+<h1>Alternative View File</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa mollitia expedita quo officia saepe dolorem quod iusto, libero beatae aliquam nisi cupiditate quibusdam exercitationem debitis reprehenderit, facilis! Quod, porro, vel.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa mollitia expedita quo officia saepe dolorem quod iusto, libero beatae aliquam nisi cupiditate quibusdam exercitationem debitis reprehenderit, facilis! Quod, porro, vel.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa mollitia expedita quo officia saepe dolorem quod iusto, libero beatae aliquam nisi cupiditate quibusdam exercitationem debitis reprehenderit, facilis! Quod, porro, vel.</p>
