@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
 		<link rel="stylesheet" href="/public/dist/milligram.min.css">
 		<link rel="stylesheet" href="https://milligram.github.io/styles/main.css">
+		<link rel="stylesheet" href="/public/css/custom.css">
+
 	</head>
 	<body>
 		<main class="wrapper">

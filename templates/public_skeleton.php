@@ -18,6 +18,7 @@
     
     <link rel="stylesheet" href="<?= BASE_URL ?>../../css/skeleton.css">
     <link rel="stylesheet" href="<?= BASE_URL ?>../../css/normalize.css">
+    <link rel="stylesheet" href="<?= BASE_URL ?>../../css/custom.css">
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <link rel="icon" type="image/png" href="<?= BASE_URL ?>../../images/favicon.png">

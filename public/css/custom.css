@@ -1,0 +1,9 @@
+.button-danger {
+    background-color: red;
+    border-color: red;
+}
+
+.button-inverse {
+	background-color: black;
+    border-color: black;	
+}
