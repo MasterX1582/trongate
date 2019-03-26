@@ -46,6 +46,10 @@ class Guitars extends Trongate {
     function manage() {
         $data['rows'] = $this->model->get('id', 'store_items');
         $data['view_file'] = 'manage';
+        $data['total_rows'] = 888;
+        $data['include_css'] = true;
+        $data['include_showing_statment'] = true;
+        $data['record_name_plural'] = guitars;
         $this->template('public_milligram', $data);
     }
 

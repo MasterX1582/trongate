@@ -4,6 +4,7 @@
     <p>
         <a class="button" href="<?= BASE_URL ?>guitars/create">Create New Record</a>
     </p>
+    <?= Pagination::display($data) ?>
     <table>
         <thead>
             <tr>
