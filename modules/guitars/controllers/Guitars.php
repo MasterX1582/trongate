@@ -49,7 +49,7 @@ class Guitars extends Trongate {
         $data['total_rows'] = 888;
         $data['include_css'] = true;
         $data['include_showing_statment'] = true;
-        $data['record_name_plural'] = guitars;
+        $data['record_name_plural'] = 'guitars';
         $this->template('public_milligram', $data);
     }
 

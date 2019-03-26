@@ -7,3 +7,8 @@
 	background-color: black;
     border-color: black;	
 }
+
+
+.pagination a.active {
+	background-color: #994DC5 !important;
+}
