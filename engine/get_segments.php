@@ -1,5 +1,5 @@
 <?php
-function get_segments() {
+function get_segments($ignore_custom_routes=NULL) {
 
     //figure out how many segments needs to be ditched
     $psuedo_url = str_replace('://', '', BASE_URL);
@@ -14,7 +14,10 @@ function get_segments() {
     }
 
     $assumed_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://" . $_SERVER['HTTP_HOST'] .  $_SERVER['REQUEST_URI'];
-    $assumed_url = attempt_add_custom_routes($assumed_url);
+
+    if (!isset($ignore_custom_routes)) {
+        $assumed_url = attempt_add_custom_routes($assumed_url);
+    }
 
     $data['assumed_url'] = $assumed_url;
 
@@ -31,18 +34,34 @@ function get_segments() {
     return $data;
 }
 
-function attempt_add_custom_routes($assumed_url) {
-
+function attempt_add_custom_routes($target_url) {
+    //takes a nice URL and returns the assumed_url
     foreach (CUSTOM_ROUTES as $key => $value) {
-        $pos = strpos($assumed_url, $key);
+        $pos = strpos($target_url, $key);
 
         if (is_numeric($pos)) {
-            $assumed_url = str_replace($key, $value, $assumed_url);
+            $target_url = str_replace($key, $value, $target_url);
         }
 
     }
 
-    return $assumed_url;
+    return $target_url;
+}
+
+function attempt_return_nice_url($target_url) {
+    //takes an assumed_url and returns the nice_url
+
+    foreach (CUSTOM_ROUTES as $key => $value) {
+
+        $pos = strpos($target_url, $value);
+
+        if (is_numeric($pos)) {
+            $target_url = str_replace($value, $key, $target_url);
+        }
+
+    }
+
+    return $target_url;
 }
 
 $data = get_segments();

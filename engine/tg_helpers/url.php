@@ -47,6 +47,14 @@ function anchor($target_url, $text, $attributes=NULL, $additional_code=NULL) {
         $target_url = BASE_URL.$target_url;
     }
 
+    $target_url = attempt_return_nice_url($target_url);
+
+    $text_type = gettype($text);
+
+    if ($text_type == 'boolean') {
+        return $target_url;
+    }
+
     $extra = '';
     if (isset($attributes)) {
         foreach ($attributes as $key => $value) {

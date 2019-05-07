@@ -5,8 +5,10 @@ class Trongate {
     protected $module_name;
     protected $parent_module = '';
     protected $child_module = '';
+    public $vibe = 'cool';
 
-    public function __construct($module_name) {
+    public function __construct($module_name=NULL) {
+    
         $this->module_name = $module_name;
         $this->modules = new Modules;
 
@@ -19,6 +21,7 @@ class Trongate {
         //load the model class
         require_once 'Model.php';
         $this->model = new Model;
+
     }
 
     public function load($helper) {
@@ -31,36 +34,22 @@ class Trongate {
     }
 
     public function template($template_name, $data=NULL) {
+        $template_controller_path = '../templates/controllers/Templates.php';
+        require_once $template_controller_path;
 
-        $template_file_path = '../templates/'.$template_name.'.php';
+        $templates = new Templates;
 
-        if (!isset($data['view_file'])) {
-            $data['view_file'] = DEFAULT_METHOD;
-        }
+        if (method_exists($templates, $template_name)) {
 
-        if (!isset($data['view_module'])) {
-
-            $segments = SEGMENTS;
-
-            if (isset($segments[1])) {
-                $data['view_module'] = $segments[1];
-            } else {
-                $data['view_module'] = DEFAULT_MODULE;
+            if (!isset($data['view_file'])) {
+                $data['view_file'] = DEFAULT_METHOD;
             }
-        }
 
-        if (($data['view_module'] == 'homepage') && ($data['view_file'] == 'index')) {
-            $data['is_home'] = true;
+            $templates->$template_name($data);
+
         } else {
-            $data['is_home'] = false;
-        }
-
-        extract($data);
-
-        if (file_exists($template_file_path)) {
-            require_once($template_file_path);
-        } else {
-            die('ERROR: Unable to find template file in '.$template_file_path.'.');
+            $template_controller_path = str_replace('../', APPPATH, $template_controller_path);
+            die('ERROR: Unable to find '.$template_name.' method in '.$template_controller_path.'.');
         }
     }
 

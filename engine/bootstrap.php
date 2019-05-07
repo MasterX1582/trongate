@@ -15,3 +15,20 @@ spl_autoload_register(function($class_name) {
 
     require_once $class_name . '.php';
 });
+
+function load($template_file, $data=NULL) {
+    //load template view file
+    $file_path = APPPATH.'templates/views/'.$template_file.'.php';
+
+    if (file_exists($file_path)) {
+
+        if (isset($data)) {
+            extract($data);
+        }
+
+        require_once($file_path);
+
+    } else {
+        die('<br><b>ERROR:</b> View file does not exist at: '.$file_path);
+    }
+}
