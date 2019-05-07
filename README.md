@@ -1,7 +1,6 @@
 # The Trongate Framework
 
 ```
-/**
  * Trongate
  *
  * An open source PHP framework for web developers who like to break the rules
@@ -34,5 +33,4 @@
  * @copyright   Copyright (c) 2019, David Connelly. (https://speedcodingacademy.com)
  * @license http://opensource.org/licenses/MIT  MIT License
  * @link    https://trongate.io
- */
 ```
