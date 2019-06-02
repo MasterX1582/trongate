@@ -1,0 +1,35 @@
+/* Black color */
+.button-black {
+  background-color: black;
+  border-color: black;
+}
+.button-black.button-clear,
+.button-black.button-outline {
+  background-color: transparent;
+  color: black;
+}
+.button-black.button-clear {
+  border-color: transparent;
+}
+
+/* Danger color */
+.button-danger {
+  background-color: red;
+  border-color: red;
+}
+.button-danger.button-clear,
+.button-danger.button-outline {
+  background-color: transparent;
+  color: red;
+}
+.button-danger.button-clear {
+  border-color: transparent;
+}
+
+/* Inverse color */
+.button-black {
+  background-color: black;
+  border-color: black;
+}
+
+
