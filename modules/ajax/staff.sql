@@ -43,10 +43,10 @@ INSERT INTO `staff` (`id`, `firstname`, `lastname`, `age`, `hometown`, `job`) VA
 (18, 'Glenn', 'Quagmire', '41', 'Quahog', 'Pilot'),
 (27, 'Peter', 'Griffin', '41', 'Quahog', 'Brewery'),
 (59, 'Lois', 'Griffin', '40', 'Newport', 'Piano Teacher'),
-(64, 'Lois', 'Griffin', '40', 'Newport', 'Piano Teacher'),
-(198, 'Lois', 'Griffin', '40', 'Newport', 'Piano Teacher'),
-(5165, 'Davy', 'Moedbeck', '37', 'Erps-Kwerps', 'IT-Specialist'),
-(5698, 'David', 'Connelly', '39', 'Glasgow', 'Web Developer');
+(64, 'Homer', 'Simpson', '40', 'Newport', 'Power Plant Worker'),
+(198, 'Henry', 'Lejeune', '48', 'Paris', 'Judge'),
+(5165, 'Christopher', 'Colombus', '37', 'Madrid', 'Sailor'),
+(5698, 'Christian', 'Andressen', '39', 'Glasgow', 'Web Developer');
 
 --
 -- Indexen voor geëxporteerde tabellen
