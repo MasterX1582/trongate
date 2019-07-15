@@ -86,9 +86,16 @@ class Pagination {
                 $pagination_root.= $segments[1];
             } 
 
-            if ((isset($segments[2])) && ($page_num_segment>2)) {
-                $pagination_root.= '/'.$segments[2];
-            }
+			$segments_shift = $segments;
+			array_shift($segments_shift);
+			array_shift($segments_shift);
+			foreach($segments_shift as $segment) {
+				if (isset($segment)) {
+					if (!is_numeric($segment)){
+						$pagination_root.= '/'.$segment;
+					}
+				}
+			}
 
         } else {
             $pagination_root = BASE_URL.$data['pagination_root'];
