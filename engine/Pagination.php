@@ -86,15 +86,13 @@ class Pagination {
                 $pagination_root.= $segments[1];
             } 
 
-			$segments_shift = $segments;
-			array_shift($segments_shift);
-			array_shift($segments_shift);
-			foreach($segments_shift as $segment) {
-				if (isset($segment)) {
-					if (!is_numeric($segment)){
-						$pagination_root.= '/'.$segment;
-					}
+			$usefull_segments = array_slice($segments, 2);
+			foreach($usefull_segments as $segment) {
+			  if (isset($segment)) {
+				if (!is_numeric($segment)){
+				  $pagination_root.= '/'.$segment;
 				}
+			  }
 			}
 
         } else {
